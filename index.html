@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" class=" eqxcxax idc0_347"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://tamheen-club.com/img/icons.ico">
+    <title>شهادة حضور</title>
+<style>
+    @import  url("https://fonts.googleapis.com/css?family=Tajawal");
+
+    @media  print {
+
+        @page  {
+            size: A4 landscape;
+            margin: 0.00cm;
+        }
+    }
+</style></head>
+
+
+<body>
+    <div style="margin: 0;" id="del">
+        <h1 style="font-size: 150%;margin: 0;font-family: monospace;">ادخل اسمك</h1>
+        <input id="name" style="margin-bottom: 1%;"/>
+        <h1 style="font-size: 150%;margin: 0;font-family: monospace;">ادخل هويتك</h1>
+        <input style="margin-bottom: 1%;" id="id_no">
+        <h1 style="font-size: 150%;margin: 0;font-family: monospace;">ادخل عدد الايام إلي حضرتها</h1>
+        <input style="margin-bottom: 1%;" id="days" type="n"> <br>
+        <button style="margin-bottom: 3%;" onclick="myfu()">طباعة الشهادة</button>
+    </div>
+
+    <div class="certfull" style="height: 100%;margin:auto auto;font-family: Tajawal ;   ">
+            <img src="https://tamheen-club.com/img/signs/bg_cert_2_1.jpg" style="position: absolute; height: 99%;width:100%;margin-right:15px;left:2px;margin-top:-5px;">
+            <div class="contents" style="z-index:5;
+                position: relative;width:90%;margin:auto auto;top:240px;text-align: center;
+                line-height:2.4;font-size:20px">
+                تشهد
+                إدارة الموهوبين
+                بالإدارة العامة للتعليم بمحافظة جدة أن
+
+                <br>
+                الطالب /
+                <i> <b id="name_2" ></b></i>
+                ( السجل المدني
+                <i><b id="id_no_2"></b></i>)
+                <br>
+                قد
+                حضر
+                البرنامج التدريبي / <i><b>الملتقى الاثرائي الصيفي للموهوبين 2023 (صناعة العقول 4)</b></i>
+                <br>
+                <p id="days_2">
+                لمدة () يوم بمعدل () ساعة تدريبية
+                </p>
+                                والمنفذ
+                    عن بُعد
+                
+                خلال الفترة من <b>1444-12-28 هـ </b>
+                إلى <b> 1445-01-16 هـ </b>
+                <br>
+                <b> سائلين المولى له دوام التوفيق والسداد </b>
+            </div>
+                        <div style="position: absolute;left: 0;bottom: 90px;width: 100%;text-align: center; border-top:0px solid #555 ;padding:12px;font-size: 20px;">
+                    <div>
+                        <b style="padding:4px;border-bottom:0px solid #eee"> مدير إدارة الموهوبين</b>
+                        <div>
+                            <img src="https://tamheen-club.com/img/signs/maw_1.png" style="display:nones;width:155px; ">
+                            <div style="margin-top:-5px;"><b>أ. عبد الإله محمد الغامدي</b></div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <script>
+        function myfu(){
+            var name = document.getElementById('name').value;
+            let id_no = document.getElementById("id_no").value;
+            var days = document.getElementById("days").value;
+            let del_1 = document.getElementById("del");
+            var name_2 = document.getElementById("name_2");
+            var id_no_2 = document.getElementById("id_no_2");
+            var days_2 = document.getElementById("days_2");
+            let days_no = parseInt(days);
+            var days_clo = days_no*2 ;
+
+            if(days_no > 15, days_clo < 2, days == ""){
+                alert("تحقق من صحة عدد أيام الحضور")
+                //alert("أكمل البيانات")
+            }else if(name == "", id_no == ""){
+                alert("أكمل البيانات")
+            }else{
+                name_2.innerHTML = name;
+                id_no_2.innerHTML = id_no;
+                days_2.innerHTML = "لمدة (" + days_no + ") يوم بمعدل (" + days_clo + ") ساعة تدريبية";
+                del.remove()
+                print()
+            }
+        }
+    </script>
+</body></html>
